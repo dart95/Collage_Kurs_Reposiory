@@ -1,0 +1,53 @@
+{
+  "admin": {
+    "disabled": true,
+    "listen": "",
+    "enforce_origin": true,
+    "origins": ["http://localhost:8080"],
+    "Host": ["test.com"],
+    "Access-Control-Allow-Origin": ["http://foreign.com"],
+    "config": {
+      "persist": false,
+      "load": {}
+    },
+    "identity": {
+      "identifiers": [""],
+      "issuers": [{}]
+    },
+    "remote": {
+      "listen": "",
+      "access_control": [
+        {
+          "public_keys": ["110010100001"],
+          "permissions": [
+            {
+              "paths": [""],
+              "methods": [""]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "logging": {
+    "sink": {
+      "writer": {}
+    },
+    "logs": {
+      "": {
+        "writer": {},
+        "encoder": {},
+        "level": "",
+        "sampling": {
+          "interval": 0,
+          "first": 0,
+          "thereafter": 0
+        },
+        "include": [""],
+        "exclude": [""]
+      }
+    }
+  },
+  "storage": {},
+  "apps": {}
+}

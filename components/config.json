@@ -1,0 +1,34 @@
+{
+  "admin": {
+    "disabled": true,
+    "enforce_origin": true,
+    "origins": ["http://localhost:8080"]
+  },
+  "apps": {
+    "http": {
+      "http_port": 8081,
+      "servers": {
+        "default": {
+          "listen": ["127.0.0.16:8081"],
+          "routes": [
+            {
+              "match": [
+                {
+                  "path": ["/components/*"]
+                }
+              ],
+              "handle": [
+                {
+                  "handler": "file_server",
+                  "body": "Hello World", 
+                  "root": "C:\\flex",
+                  "browse": {}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
