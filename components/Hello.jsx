@@ -12,18 +12,16 @@ import { fade } from "@material-ui/core/styles";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Profile from "./Profile";
 import Account from "./Account";
-//import Login from "./Login";
-import TextField from "@material-ui/core/TextField";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
+import News from "./News";
+//import Loginform from "./Loginform";
 
-async function Getitem() {
+/*async function Getitem() {
   let get = await fetch(" http://localhost:8000/api/config/")
     .then((resp) => resp.json())
 
     .then((conf) => console.log(conf));
-}
-Getitem();
+}*/
+//Getitem();
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -76,14 +74,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-//const [open, setOpen] = React.useState(false);
-
-//const Loginclick = () => {
-//setOpen(true);
-//};
-//const handleClose = () => {
-//setOpen(false);
-//};
+function Log() {
+  alert("start");
+}
 
 export default function ButtonAppBar() {
   const classes = useStyles();
@@ -120,7 +113,9 @@ export default function ButtonAppBar() {
                 inputProps={{ "aria-label": "search" }}
               />
             </div>
-            <Button color="inherit">Login</Button>
+            <Button color="inherit" onClick={Log}>
+              Login
+            </Button>
           </Toolbar>
         </AppBar>
       </div>
@@ -130,6 +125,9 @@ export default function ButtonAppBar() {
         </Route>
         <Route path="/my-account">
           <Account />
+        </Route>
+        <Route path="/news">
+          <News />
         </Route>
       </Switch>
     </BrowserRouter>

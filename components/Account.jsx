@@ -8,14 +8,16 @@ import Avatars from "./Avatars";
 
 const useStyles = makeStyles((theme) => ({
   input: {
-    position: "static",
-
-    width: 545,
+    width: "60vh",
     height: 55,
-    marginTop: 19,
-    marginLeft: 475,
+
     border: "white",
+
     //why border make input invisible
+  },
+  container: {
+    alignItems: "center",
+    marginTop: 20,
   },
 }));
 
@@ -23,17 +25,15 @@ export default function SimpleContainer() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <input className={classes.input} placeholder="Post your news" />
-      <Avatars />
-      <Container maxWidth="sm">
-        <Typography component="div" style={[]} />
+      <Container maxWidth="sm" className={classes.container}>
+        <input className={classes.input} placeholder="Post your news" />
         <Typography
           component="div"
           style={{
             backgroundColor: "#cfe8fc",
             height: "100vh",
-            width: "550px",
-            marginTop: 10,
+            width: "60vh",
+            marginTop: 20,
           }}
         />
       </Container>
