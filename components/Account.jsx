@@ -5,6 +5,7 @@ import Container from "@material-ui/core/Container";
 import Zoom from "@material-ui/core/Zoom";
 import { makeStyles } from "@material-ui/core/styles";
 import Avatars from "./Avatars";
+//import Image from "https://shirogames.com/wp-content/uploads/2019/04/Horse-warchiefs.png";
 
 const useStyles = makeStyles((theme) => ({
   input: {
@@ -18,25 +19,36 @@ const useStyles = makeStyles((theme) => ({
   container: {
     alignItems: "center",
     marginTop: 20,
+    clear: "both",
   },
+  avatars: {},
+  /*main: {
+    backgroundImage: `url(${Image})`,
+  },*/
 }));
 
 export default function SimpleContainer() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Container maxWidth="sm" className={classes.container}>
-        <input className={classes.input} placeholder="Post your news" />
-        <Typography
-          component="div"
-          style={{
-            backgroundColor: "#cfe8fc",
-            height: "100vh",
-            width: "60vh",
-            marginTop: 20,
-          }}
-        />
-      </Container>
+      <Typography className={classes.main}>
+        <Typography className={classes.avatars}>
+          <Avatars></Avatars>
+        </Typography>
+
+        <Container maxWidth="sm" className={classes.container}>
+          <input className={classes.input} placeholder="Post your news" />
+          <Typography
+            component="div"
+            style={{
+              backgroundColor: "#cfe8fc",
+              height: "100vh",
+              width: "60vh",
+              marginTop: 20,
+            }}
+          ></Typography>
+        </Container>
+      </Typography>
     </React.Fragment>
   );
 }

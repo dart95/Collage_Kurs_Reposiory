@@ -12,7 +12,10 @@ import { fade } from "@material-ui/core/styles";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Profile from "./Profile";
 import Account from "./Account";
+import Fade from "@material-ui/core/Fade";
 import News from "./News";
+import Fade from "@material-ui/core/Fade";
+import Snackbar from "@material-ui/core/Snackbar";
 //import Loginform from "./Loginform";
 
 /*async function Getitem() {
@@ -24,7 +27,10 @@ import News from "./News";
 //Getitem();
 const useStyles = makeStyles((theme) => ({
   root: {
+    position: "relative",
     flexGrow: 1,
+    margin: 0,
+    padding: 0,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -72,14 +78,42 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-}));
+  footer: {
+    width: "100%",
+    marginTop: "80%",
+    position: "absolute",
+    backgroundColor: "red",
+  },
+  /* maincontainer: {
+    position: "relative",
 
-function Log() {
-  alert("start");
-}
+    minHeight: "90vh",
+    height: "100%",
+    backgroundColor: "green",
+  },*/
+}));
 
 export default function ButtonAppBar() {
   const classes = useStyles();
+
+  // const [state, setState] = React.useState({
+  //   open: false,
+  //   Transition: Fade,
+  // });
+
+  // const handleClick = (Transition) => () => {
+  //   setState({
+  //     open: true,
+  //     Transition,
+  //   });
+  // };
+
+  // const handleClose = () => {
+  //   setState({
+  //     ...state,
+  //     open: false,
+  //   });
+  // };
 
   return (
     <BrowserRouter>
@@ -113,11 +147,20 @@ export default function ButtonAppBar() {
                 inputProps={{ "aria-label": "search" }}
               />
             </div>
-            <Button color="inherit" onClick={Log}>
-              Login
+            <Button color="inherit" onClick={handleClick(Fade)}>
+              <span>Login</span>
             </Button>
+            <Snackbar
+              open={state.open}
+              onClose={handleClose}
+              TransitionComponent={state.Transition}
+              message="Registrate completed  "
+              key={state.Transition.name}
+            />
           </Toolbar>
         </AppBar>
+        <div className={classes.maincontainer}></div>
+        <div className={classes.footer}>uoiwuqohyudwpqhp</div>
       </div>
       <Switch>
         <Route path="/profile">
