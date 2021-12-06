@@ -9,12 +9,14 @@ import Head from "./Head";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
 import { fade } from "@material-ui/core/styles";
+import { alpha } from "@material-ui/core/styles";
+import Alert from "@material-ui/lab/Alert";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Profile from "./Profile";
 import Account from "./Account";
 import Fade from "@material-ui/core/Fade";
 import News from "./News";
-import Fade from "@material-ui/core/Fade";
+import Succsess from "./succses";
 import Snackbar from "@material-ui/core/Snackbar";
 //import Loginform from "./Loginform";
 
@@ -96,25 +98,6 @@ const useStyles = makeStyles((theme) => ({
 export default function ButtonAppBar() {
   const classes = useStyles();
 
-  // const [state, setState] = React.useState({
-  //   open: false,
-  //   Transition: Fade,
-  // });
-
-  // const handleClick = (Transition) => () => {
-  //   setState({
-  //     open: true,
-  //     Transition,
-  //   });
-  // };
-
-  // const handleClose = () => {
-  //   setState({
-  //     ...state,
-  //     open: false,
-  //   });
-  // };
-
   return (
     <BrowserRouter>
       <div className={classes.root}>
@@ -147,16 +130,7 @@ export default function ButtonAppBar() {
                 inputProps={{ "aria-label": "search" }}
               />
             </div>
-            <Button color="inherit" onClick={handleClick(Fade)}>
-              <span>Login</span>
-            </Button>
-            <Snackbar
-              open={state.open}
-              onClose={handleClose}
-              TransitionComponent={state.Transition}
-              message="Registrate completed  "
-              key={state.Transition.name}
-            />
+            <Succsess></Succsess>
           </Toolbar>
         </AppBar>
         <div className={classes.maincontainer}></div>
