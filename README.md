@@ -24,3 +24,4 @@ Your app is ready to be deployed!
 No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
 # College-Kur-Repository
 # Collage_Kurs_Reposiory
+# Collage_Kurs_Reposiory
