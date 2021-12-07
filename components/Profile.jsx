@@ -1,16 +1,7 @@
 import React from "react";
 import Link from "@material-ui/core/Link";
+import ReactLogo from "./ReactLogo";
 
 export default function ButtonLink() {
-  return (
-    <Link
-      component="button"
-      variant="body2"
-      onClick={() => {
-        console.info("I'm a button.");
-      }}
-    >
-      Button Link
-    </Link>
-  );
+  return <ReactLogo />;
 }
