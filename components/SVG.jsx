@@ -5,16 +5,18 @@ import clsx from "clsx";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
-  // "@keyframes fadeAnimation": {
-  //   from: { transform: "0deg" },
-  //   to: { transform: "180deg" },
-  // },
+  "@keyframes spinAnimation": {
+    from: { transform: "rotate(0deg)" },
+    to: { transform: "rotate(180deg)" },
+  },
   Logo: {
     height: "30vmin",
     pointerEvents: "none",
     // backgroundColor: "grey",
     marginTop: "20px",
-    animation: "infinite 10s linear ",
+    "@media (prefers-reduced-motion: no-preference)": {
+      animation: "$spinAnimation infinite 10s linear",
+    },
   },
 }));
 
