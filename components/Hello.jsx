@@ -134,7 +134,6 @@ export default function ButtonAppBar() {
           </Toolbar>
         </AppBar>
         <div className={classes.maincontainer}></div>
-        <div className={classes.footer}>uoiwuqohyudwpqhpkjqppdpwqdpoq</div>
       </div>
       <Switch>
         <Route path="/profile">
