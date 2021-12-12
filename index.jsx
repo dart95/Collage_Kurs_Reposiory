@@ -4,5 +4,6 @@ import ReactDOM from "react-dom";
 import Head from "./components/Head";
 import Hello from "./components/Hello";
 import CarouselBox from "./components/CarouselBox";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-ReactDOM.render(<CarouselBox />, document.getElementById("app"));
+ReactDOM.render(<Hello />, document.getElementById("app"));

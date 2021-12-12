@@ -12,18 +12,22 @@ const useStyles = makeStyles((theme) => ({
   Logo: {
     height: "30vmin",
     pointerEvents: "none",
-    // backgroundColor: "grey",
+
     marginTop: "20px",
     "@media (prefers-reduced-motion: no-preference)": {
       animation: "$spinAnimation infinite 10s linear",
     },
+  },
+  center: {
+    backgroundColor: "#321E97FF",
+    width: "100%",
   },
 }));
 
 export default function ButtonLink() {
   const classes = useStyles();
   return (
-    <center>
+    <center className={classes.center}>
       <img className={classes.Logo} src="../components/Img/react-js.svg"></img>
     </center>
   );
