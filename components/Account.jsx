@@ -18,20 +18,17 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     alignItems: "center",
-    marginTop: 20,
+    marginTop: "20px",
     clear: "both",
   },
   avatars: {},
-  /*main: {
-    backgroundImage: `url(${Image})`,
-  },*/
 }));
 
 export default function SimpleContainer() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Typography className={classes.main}>
+      <Typography>
         <Typography className={classes.avatars}>
           <Avatars></Avatars>
         </Typography>

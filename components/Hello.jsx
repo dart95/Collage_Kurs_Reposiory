@@ -80,19 +80,6 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  footer: {
-    width: "100%",
-    marginTop: "80%",
-    position: "absolute",
-    backgroundColor: "red",
-  },
-  /* maincontainer: {
-    position: "relative",
-
-    minHeight: "90vh",
-    height: "100%",
-    backgroundColor: "green",
-  },*/
 }));
 
 export default function ButtonAppBar() {

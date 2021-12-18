@@ -11,11 +11,11 @@ const useStyles = makeStyles((theme) => ({
   freshnews: {
     marginTop: "100px",
 
-    marginLeft: "100px",
+    marginLeft: "2%",
   },
   freshstyle: {
     marginTop: 100,
-    margin: "auto",
+
     marginLeft: "37%",
     marginBottom: "20px",
     textshadow: "1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue",

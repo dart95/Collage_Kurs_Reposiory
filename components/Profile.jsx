@@ -9,11 +9,7 @@ export default function ButtonLink() {
   return (
     <Typography>
       <SVGicon />
-      <CarouselBox
-        style={{
-          marginTop: 20,
-        }}
-      ></CarouselBox>
+      <CarouselBox></CarouselBox>
     </Typography>
   );
 }
